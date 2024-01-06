@@ -1,0 +1,64 @@
+public class Course {
+    private String courseCode;
+    private String title;
+    private String description;
+    private int capacity;
+    private String schedule;
+    private int enrolledStudents;
+}
+import java.util.ArrayList;
+import java.util.List;
+
+public class Student {
+    private String studentID;
+    private String name;
+    private List<Course> registeredCourses;
+}
+import java.util.List;
+
+public class RegistrationSystem {
+    private List<Course> courseDatabase;
+    private List<Student> studentDatabase;
+
+    public RegistrationSystem(List<Course> courseDatabase, List<Student> studentDatabase) {
+        this.courseDatabase = courseDatabase;
+        this.studentDatabase = studentDatabase;
+    }
+
+    public void displayCourseListing() {
+        // Display available courses with details and available slots
+    }
+
+    public void registerStudentForCourse(Student student, Course course) {
+        // Allow students to register for courses
+    }
+
+    public void removeStudentFromCourse(Student student, Course course) {
+        // Enable students to drop courses they have registered for
+    }
+}
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        // Initialize course and student databases
+        List<Course> courseDatabase = new ArrayList<>();
+        List<Student> studentDatabase = new ArrayList<>();
+        // Populate courseDatabase and studentDatabase with initial data
+
+        // Create a RegistrationSystem instance
+        RegistrationSystem registrationSystem = new RegistrationSystem(courseDatabase, studentDatabase);
+
+        // Display course listing
+        registrationSystem.displayCourseListing();
+
+        // Simulate student registration
+        Student student1 = new Student(/* student details */);
+        Course course1 = courseDatabase.get(0);
+        registrationSystem.registerStudentForCourse(student1, course1);
+
+        // Simulate student removal from course
+        registrationSystem.removeStudentFromCourse(student1, course1);
+    }
+}
